@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">PRACTICA DE RECURSOS Y EVENTOS</string>
+    <string name="rd_btn_es">Español</string>
+    <string name="rd_btn_en">Inglés</string>
+    <string name="txt_vw_nom">Nombre</string>
+    <string name="edt_txt_nom">Introduce tu nombre</string>
+    <string name="txt_vw_ape">Apellido</string>
+    <string name="edt_txt_ape">Introduce(s) tu apellido(s)</string>
+
+    <string name="rd_btn_es_en">Spanish</string>
+    <string name="rd_btn_en_en">English</string>
+    <string name="txt_vw_nom_en">First name</string>
+    <string name="edt_txt_nom_en">Your first name</string>
+    <string name="txt_vw_ape_en">Last name</string>
+    <string name="edt_txt_ape_en">Your last name</string>
+</resources>
