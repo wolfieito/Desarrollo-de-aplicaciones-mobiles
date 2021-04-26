@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 double a = 2, b = 3;
-                rd = Integer.parseInt(String.valueOf(edTxtRadio.getText()));
+                rd = Double.parseDouble(String.valueOf(edTxtRadio.getText()));
                 vol=(a/b)*((ang)*Math.pow(rd,3));
                 Toast.makeText(getApplicationContext(),"El volumen es: "+vol,Toast.LENGTH_SHORT).show();
             }
