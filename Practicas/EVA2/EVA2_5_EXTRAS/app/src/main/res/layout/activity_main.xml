@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre" />
+
+    <EditText
+        android:id="@+id/edTxtNom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apellido" />
+
+    <EditText
+        android:id="@+id/edTxtApe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edad" />
+
+    <EditText
+        android:id="@+id/edTxtEdad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sueldo" />
+
+    <EditText
+        android:id="@+id/edTxtSueldo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Estado civil" />
+
+    <RadioGroup
+        android:id="@+id/rdGrpEstadoCivil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rdBtnSol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Soltero" />
+
+        <RadioButton
+            android:id="@+id/rdBtnCas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Casado" />
+
+        <RadioButton
+            android:id="@+id/rdBtnDiv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Divorciado" />
+
+        <RadioButton
+            android:id="@+id/rdBtnNoIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sin info" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/chkBxInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Info adicional" />
+
+    <Button
+        android:id="@+id/btnMandar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enviar"
+        android:onClick="onClicl"/>
+</LinearLayout>
