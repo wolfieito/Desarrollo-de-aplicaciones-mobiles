@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registrarse"
+    android:layout_margin="20dp"
+    android:onClick="hidekeyboard"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingresa tus datos"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/edTxtUsuRegi"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Usuario"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/edTxtNomRegi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_margin="10dp"
+        android:inputType="textPersonName"
+        android:hint="Nombre"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/edTxtApeRegi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_margin="10dp"
+        android:inputType="textPersonName"
+        android:hint="Apellidos"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/edTxtTelRegi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:layout_margin="10dp"
+        android:hint="Número de teléfono"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/edTxtConRegi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_margin="10dp"
+        android:inputType="textPassword"
+        android:hint="Contraseña"
+        android:text="" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mostrar contraseña"
+        android:id="@+id/mostrarcontra"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/mybutton"
+            android:onClick="onClickRegis"
+            android:text="Registrarse"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/registrarse"
+            android:onClick="onClickCncel"
+            android:text="Cancelar" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/errorLabel"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:textColor="#9F0F0F" />
+
+</LinearLayout>
