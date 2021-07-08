@@ -52,4 +52,12 @@ public class Opciones extends AppCompatActivity {
         Intent intent = new Intent(this,Reservar.class);
         startActivity(intent);
     }
+    public void onClickReservas(View v){
+        Intent intent = new Intent(this,Reservas.class);
+        startActivity(intent);
+    }
+    public void onClickPerfil(View v){
+        Intent intent = new Intent(this,Perfil.class);
+        startActivity(intent);
+    }
 }

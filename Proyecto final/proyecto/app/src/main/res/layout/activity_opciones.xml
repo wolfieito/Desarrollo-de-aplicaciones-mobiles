@@ -51,6 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="Mi cuenta"
+        android:onClick="onClickPerfil"
         android:background="@drawable/registrarse"/>
 
     <LinearLayout

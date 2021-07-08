@@ -38,7 +38,6 @@ public class MakeReser extends AppCompatActivity {
                 android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
-        edTxtNom = findViewById(R.id.edtTxtNom);
     }
 
     public void onClickCierr(View v){
@@ -47,15 +46,11 @@ public class MakeReser extends AppCompatActivity {
     }
 
     public void onClickAceptReser(View v){
-        if(edTxtNom.getText().toString().equals("")){
-            Toast.makeText(getApplicationContext(),"Por favor introduzca un nombre",Toast.LENGTH_LONG).show();
-        }else {
-            intent.putExtra("NOMBRE",edTxtNom.getText().toString());
+            intent.putExtra("NOMBRE",ClientData.nombres);
             intent.putExtra("PERSONAS",spinner.getSelectedItem().toString());
             intent.putExtra("DENTRO",getRadioText(rdGrpMesa.getCheckedRadioButtonId()));
             setResult(Activity.RESULT_OK,intent);
             finish();
-        }
     }
     public void hidekeyboard(View v){
         InputMethodManager inputMethodManager=(InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);

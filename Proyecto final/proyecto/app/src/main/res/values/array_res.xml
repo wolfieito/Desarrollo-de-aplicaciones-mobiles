@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="planets_array">
+        <item>Dominos</item>
+        <item>Burger king</item>
+        <item>Little ceasars</item>
+        <item>KFC</item>
+        <item>Carls junior</item>
+        <item>Pizza hut</item>
+        <item>Subway</item>
+        <item>Wendys</item>
+    </string-array>
+</resources>

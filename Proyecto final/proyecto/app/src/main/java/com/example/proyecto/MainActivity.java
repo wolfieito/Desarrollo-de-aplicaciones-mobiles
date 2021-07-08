@@ -12,6 +12,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +22,9 @@ import com.android.volley.Response;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.sql.Time;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -53,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
     private void setErrorMessage(String error){
         handler.post(new Runnable() {
             @Override
@@ -82,10 +87,11 @@ public class MainActivity extends AppCompatActivity {
                     if (response.has("error"))
                         setErrorMessage(response.getString("error"));
                     else {
-                        startActivity(intent);
                         loginErrorLabel.setText("");
                         edTxtCon.setText("");
                         edTxtNom.setText("");
+                        startActivity(intent);
+                        buildClientData(response);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -93,6 +99,18 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         dataConsulter.fetch(Request.Method.POST,"log",postData,onResponse);
+    }
+
+    private void buildClientData(JSONObject response){
+        try{
+            ClientData.id = response.getString("_id");
+            ClientData.nombres = response.getString("nombres");
+            ClientData.apellidos = response.getString("apellidos");
+            ClientData.numero = response.getString("num_telef");
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     public void openRegis(View v){
@@ -118,5 +136,8 @@ public class MainActivity extends AppCompatActivity {
     }
     public String getTelefono(){
         return Telefono;
+    }
+    public void onClickC2(View v){
+        finish();
     }
 }
